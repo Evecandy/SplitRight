@@ -1,4 +1,3 @@
-
 Page({
   data: {
     groupDetails: { 
@@ -8,9 +7,7 @@ Page({
       split: ''
     },
     memberInput: '',
-    addedMembers: [
-      
-    ]
+    addedMembers: []
   },
 
   onLoad(query) {
@@ -76,33 +73,83 @@ Page({
   onCreateWalletTap() {
     // Validate if enough members are added (e.g., at least 1 besides creator)
     if (this.data.addedMembers.length < 2) {
-         my.showToast({ content: 'Please add at least one other member', type: 'fail' });
-         return;
+      my.showToast({ content: 'Please add at least one other member', type: 'fail' });
+      return;
     }
 
     console.log('Create Group Wallet tapped. Group Data:', this.data.groupDetails);
     console.log('Members:', this.data.addedMembers);
-    // Navigate to the processing screen
-    my.navigateTo({
-      url: '/pages/creatingWallet/creatingWallet'
-
+    
+    
+    my.showLoading({
+      content: 'Creating wallet...'
     });
 
+    // Generating a unique group ID
+    const groupId = `WLID-${Date.now().toString(36).toUpperCase()}`;
+    
+    // Prepare the final group data
+    const finalGroupData = {
+      id: groupId,
+      name: this.data.groupDetails.name,
+      description: this.data.groupDetails.desc,
+      validUntil: this.data.groupDetails.date,
+      splitMethod: this.data.groupDetails.split,
+      members: this.data.addedMembers,
+      memberCount: this.data.addedMembers.length,
+      approvalRate: '50%', // Default approval rate
+      walletBalance: 0,
+      createdAt: new Date().toISOString()
+    };
 
-    my.setStorage({
-        key: 'newGroupData',
-        data: {
-            details: this.data.groupDetails,
-            members: this.data.addedMembers
-        },
-        success: () => { console.log('Temp group data saved'); }
+    
+    my.getStorage({
+      key: 'userGroups',
+      success: (res) => {
+        
+        const groups = res.data || [];
+        groups.push(finalGroupData);
+        
+        my.setStorage({
+          key: 'userGroups',
+          data: groups,
+          success: () => {
+            my.hideLoading();
+            // Navigate to success page with group ID
+            my.navigateTo({
+              url: `/pages/groupCreated/groupCreated?groupId=${encodeURIComponent(groupId)}`
+            });
+          },
+          fail: (err) => {
+            my.hideLoading();
+            console.error('Failed to save group data:', err);
+            my.showToast({ content: 'Failed to create group wallet', type: 'fail' });
+          }
+        });
+      },
+      fail: (err) => {
+        // If userGroups doesn't exist yet, create it with this group
+        my.setStorage({
+          key: 'userGroups',
+          data: [finalGroupData],
+          success: () => {
+            my.hideLoading();
+            // Navigate to success page with group ID
+            my.navigateTo({
+              url: `/pages/groupCreated/groupCreated?groupId=${encodeURIComponent(groupId)}`
+            });
+          },
+          fail: (storageErr) => {
+            my.hideLoading();
+            console.error('Failed to create first group:', storageErr);
+            my.showToast({ content: 'Failed to create group wallet', type: 'fail' });
+          }
+        });
+      }
     });
-
-
   },
 
   onBackTap() {
     my.navigateBack();
   }
 });
-

@@ -1,6 +1,6 @@
 <view class="page">
   <view class="header">
-    <text class="header-text">Group Created!</text>
+    <text class="header-text">Group wallet Created!</text>
   </view>
   
   <view class="content">
@@ -11,12 +11,11 @@
     <text class="success-text">Group Successfully Created</text>
     
     <view class="group-info">
-      <text class="info-line">Group ID: {{group.id}}</text>
-      <text class="info-line">{{group.name}}</text>
-      <text class="info-line">Members: {{group.memberCount}} (including you)</text>
-      <text class="info-line">Valid until: {{group.validUntil}}</text>
-      <text class="info-line">Approval: {{group.approvalRate}} of members</text>
-      <text class="info-line">Wallet Balance: KES {{group.walletBalance}}</text>
+      <text class="info-line">Group ID: {{group.id || 'N/A'}}</text>
+      <text class="info-line">Members: {{group.memberCount || 0}} (including you)</text>
+      <text class="info-line">Valid until: {{group.validUntil || 'N/A'}}</text>
+      <text class="info-line">Approval: {{group.approvalRate || '50%'}} of members</text>
+      <text class="info-line">Wallet Balance: KES {{group.walletBalance || 0}}</text>
     </view>
     
     <button class="primary-button" onTap="addFunds">Add Funds Now</button>

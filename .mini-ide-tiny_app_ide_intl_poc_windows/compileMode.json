@@ -12,7 +12,7 @@
     },
     {
       "title": "pages/groupCreated/groupCreated",
-      "page": "pages/approvePayment/approvePayment",
+      "page": "pages/groupCreated/groupCreated",
       "pageQuery": "groupId=WKD-2025-LMTKGB"
     },
     {
@@ -44,6 +44,11 @@
       "title": "pages/index/index",
       "page": "pages/index/index",
       "pageQuery": ""
+    },
+    {
+      "title": "pages/AddMembers/AddMembers",
+      "page": "pages/AddMembers/AddMembers",
+      "pageQuery": "groupId=WKD-2025-T4BFEN"
     }
   ]
 }

@@ -15,6 +15,7 @@ Page({
   onLoad: function(query) {
     // Get the group ID from the URL parameters
     const groupId = query.groupId || '';
+    console.log('Group Created page loaded with ID:', groupId);
     
     this.setData({
       groupId: groupId,
@@ -29,10 +30,12 @@ Page({
     my.getStorage({
       key: 'userGroups',
       success: (res) => {
+        console.log('Retrieved userGroups:', res.data);
         const groups = res.data || [];
         const group = groups.find(g => g.id === groupId);
         
         if (group) {
+          console.log('Found group:', group);
           // Format the date for display
           const formattedDate = this.formatDate(group.validUntil);
           
@@ -40,7 +43,7 @@ Page({
             group: {
               id: group.id,
               name: group.name,
-              memberCount: group.members ? group.members.length : 0,
+              memberCount: group.memberCount || (group.members ? group.members.length : 0),
               validUntil: formattedDate,
               approvalRate: group.approvalRate || '50%',
               walletBalance: group.walletBalance || 0
