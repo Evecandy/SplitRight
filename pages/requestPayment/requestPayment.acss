@@ -1,0 +1,53 @@
+
+.page-container { background-color: #f4f4f4; min-height: 100vh; }
+.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
+.header-title { font-size: 36rpx; font-weight: bold; }
+
+.form-container { padding: 30rpx; }
+
+.form-item { margin-bottom: 30rpx; }
+
+.label { display: block; font-size: 28rpx; color: #333; margin-bottom: 10rpx; font-weight: 500; }
+
+.input-field, .textarea-field {
+  height: 40px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 8rpx;
+  padding: 18rpx 20rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+.textarea-field { height: 120rpx; }
+
+.upload-area {
+  background-color: #eeeeee;
+  border: 2rpx dashed #cccccc;
+  border-radius: 8rpx;
+  padding: 40rpx 20rpx;
+  text-align: center;
+  min-height: 100rpx; /* Minimum height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload-text { color: #888888; font-size: 28rpx; }
+.receipt-thumbnail {
+    max-width: 80%;
+    max-height: 150rpx; /* Limit thumbnail size */
+    border-radius: 4rpx;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ecc71;
+  color: white;
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 25rpx 0;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}

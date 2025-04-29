@@ -1,0 +1,112 @@
+/* pages/welcome/welcome.acss */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ffffff; 
+  box-sizing: border-box;
+}
+
+
+.header {
+  background-color: #2ecc71; 
+  padding: 25rpx 30rpx;
+  text-align: center;
+  /* remove flex-shrink if header should not shrink */
+  flex-shrink: 0;
+}
+
+.header-title {
+  color: #ffffff; /* White text */
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+/* Main Content Area */
+.content-area {
+  flex-grow: 1; /* Takes up available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  padding: 40rpx;
+  text-align: center;
+}
+
+/* Checkmark Icon */
+.checkmark-icon-container {
+  width: 180rpx; /* Adjust size */
+  height: 180rpx;
+  background-color: #2ecc71; /* Green background */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50rpx; /* Space below icon */
+}
+
+/* Style for Option 3: Simulate checkmark with views */
+.checkmark-symbol {
+  width: 40rpx;
+  height: 80rpx;
+  border: solid #ffffff; /* White checkmark */
+  border-width: 0 12rpx 12rpx 0; /* Thickness */
+  transform: rotate(45deg) translateY(-10rpx); /* Rotate and position V */
+}
+/* If using Option 2: Image */
+.checkmark-image {
+    width: 100rpx; /* Adjust image size within circle */
+    height: 100rpx;
+}
+
+
+/* Text Block */
+.text-block {
+  margin-bottom: 60rpx; /* Space below text block */
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-title {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 15rpx;
+}
+
+.welcome-subtitle {
+  font-size: 30rpx;
+  color: #666666;
+  margin-bottom: 25rpx;
+}
+
+.welcome-description {
+  font-size: 28rpx;
+  color: #777777;
+  line-height: 1.5; 
+}
+
+
+.get-started-button {
+  background-color: #2ecc71; 
+  color: #ffffff;
+  border-radius: 15rpx;
+  font-size: 32rpx;
+  padding: 20rpx 80rpx; 
+  width: auto; 
+  margin-top: 20rpx; 
+  display: flex;
+  align-items: center;
+}
+
+
+.footer {
+  padding: 30rpx;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.footer-text {
+  font-size: 24rpx;
+  color: #aaaaaa; 
+}

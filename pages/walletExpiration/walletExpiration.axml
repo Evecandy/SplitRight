@@ -1,0 +1,36 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Wallet Expiration</text>
+  </view>
+
+  <view class="content-area">
+    <view class="info-card">
+      <text class="group-name">Group: {{groupInfo.name}}</text>
+      <text class="expiry-status {{groupInfo.statusClass}}">{{groupInfo.expiryStatus}}</text>
+      <text class="detail-text">Current Balance: KES {{groupInfo.balance}}</text>
+      <text class="detail-text note">{{groupInfo.note}}</text>
+    </view>
+
+    <view class="options-section">
+      <text class="section-title">Options</text>
+
+      <view class="option-item" onTap="onOptionTap" data-option="extend">
+        <text class="option-title">Extend Validity</text>
+        <text class="option-description">Add more time to this group</text>
+      </view>
+
+      <view class="option-item" onTap="onOptionTap" data-option="expense">
+        <text class="option-title">Final Expense</text>
+        <text class="option-description">Add one last payment</text>
+      </view>
+
+      <view class="option-item" onTap="onOptionTap" data-option="redistribute">
+        <text class="option-title">Redistribute Now</text>
+        <text class="option-description">Close wallet and return funds</text>
+      </view>
+    </view>
+
+    <button class="back-button" type="text" onTap="onBackTap">Back to Group</button>
+
+  </view>
+</view>

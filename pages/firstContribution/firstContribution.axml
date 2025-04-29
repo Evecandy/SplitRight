@@ -1,0 +1,30 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">First Contribution</text>
+  </view>
+
+  <view class="content-area">
+    <view class="info-card group-info-card">
+      <text class="group-title">{{groupInfo.title}}</text>
+      <text class="group-subtitle">{{groupInfo.subtitle}}</text>
+      <text class="group-balance">Current Balance: KES {{groupInfo.balance}}</text>
+    </view>
+
+    <view class="info-card text-info-card">
+      <text>Would you like to contribute?</text>
+      <text>Other members will be notified.</text>
+      <text>You can also contribute later.</text>
+    </view>
+
+    <view class="amount-input-section">
+      <text class="label">Contribution Amount</text>
+      <view class="input-container">
+        <text class="currency-symbol">KES</text>
+        <input class="amount-input" type="digit" placeholder="Enter amount" value="{{contributionAmount}}" onInput="onAmountInput"/>
+      </view>
+    </view>
+
+    <button class="action-button add-contribution-button" type="primary" onTap="onAddContributionTap">Add Contribution</button>
+    <button class="action-button skip-button" type="default" onTap="onSkipTap">Skip for Now</button>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Funds Redistribution</text>
+  </view>
+
+  <view class="content-area">
+    <view class="summary-card">
+      <text class="group-name">Group: {{summaryInfo.groupName}}</text>
+      <text class="detail-text">Final Balance: KES {{summaryInfo.finalBalance}}</text>
+      <text class="detail-text">Total Spent: KES {{summaryInfo.totalSpent}}</text>
+      <text class="detail-text">Members: {{summaryInfo.members}}</text>
+    </view>
+
+    <view class="method-section">
+      <text class="section-label">Redistribution Method</text>
+      <view class="method-display {{redistributionMethod === 'proportional' ? 'selected' : ''}}">
+          <view class="method-icon {{redistributionMethod === 'proportional' ? 'selected' : ''}}"></view>
+          <text class="method-text">Proportional to Contribution</text>
+      </view>
+       <view class="method-display {{redistributionMethod === 'equal' ? 'selected' : ''}}">
+          <view class="method-icon {{redistributionMethod === 'equal' ? 'selected' : ''}}"></view>
+          <text class="method-text">Equal Split</text>
+      </view>
+       </view>
+
+    <view class="share-section">
+      <text class="section-label">Your Share</text>
+      <view class="share-display">
+        <text class="share-label">You will receive</text>
+        <text class="share-amount">KES {{yourShare}}</text>
+      </view>
+    </view>
+
+    <button class="action-button confirm-button" type="primary" onTap="onConfirmTap">Confirm Redistribution</button>
+    <button class="action-button view-summary-button" type="default" onTap="onViewSummaryTap">View Full Summary</button>
+  </view>
+</view>

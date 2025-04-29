@@ -1,0 +1,29 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Payment Approved</text>
+  </view>
+
+  <view class="content-area">
+    <view class="details-card">
+       <text class="bill-title">{{paymentDetails.title}}</text>
+       <text class="amount">KES {{paymentDetails.amount}}</text>
+       <text class="detail-text">Requested by: {{paymentDetails.requestedBy}}</text>
+       <text class="detail-text">Group: {{paymentDetails.groupName}}</text>
+       <text class="detail-text approval-status approved">Approval: {{paymentDetails.approvals}} / {{paymentDetails.requiredApprovals}} members</text>
+       <text class="detail-text status-indicator">Status: Approved</text>
+    </view>
+
+    <view class="receipt-section">
+      <text class="section-label">Receipt</text>
+       <view class="receipt-view-area">
+          <image a:if="{{paymentDetails.receiptThumbnail}}" class="receipt-thumbnail-display" src="{{paymentDetails.receiptThumbnail}}" mode="aspectFit"/>
+          <button class="view-receipt-button" size="mini" onTap="onViewReceiptTap" disabled="{{!paymentDetails.receiptUrl}}">
+             {{paymentDetails.receiptUrl ? 'View Receipt' : 'No Receipt'}}
+          </button>
+       </view>
+    </view>
+
+    <!-- <button class="back-button" type="default" onTap="onBackTap">Back to Group</button> -->
+
+  </view>
+</view>

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/AddMembers/AddMembers",
+    "pages/approvePayment/approvePayment",
+    "pages/createGroup/createGroup",
+    "pages/creatingWallet/creatingWallet",
+    "pages/firstContribution/firstContribution",
+    "pages/fundRedistribution/fundRedistribution",
+    "pages/groupCreated/groupCreated",
+    "pages/groupDetails/groupDetails",
+    "pages/home/home",
+    "pages/joinGroup/joinGroup",
+    "pages/paymentApproved/paymentApproved",
+    "pages/requestPayment/requestPayment",
+    "pages/walletExpiration/walletExpiration"
+  ],
+  "window": {
+    "defaultTitle": "SplitRight"
+  }
+}

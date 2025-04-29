@@ -1,0 +1,163 @@
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes full height */
+  background-color: #f4f4f4;
+  padding-bottom: 120rpx; /* Space for the fixed tab bar */
+  box-sizing: border-box;
+}
+
+
+.header {
+  background-color: #2ecc71; 
+  padding: 25rpx 30rpx;
+  text-align: center;
+}
+
+.header-title {
+  color: #ffffff; 
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 30rpx;
+  padding: 15rpx 25rpx;
+  border-radius: 40rpx; 
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+  flex-grow: 1;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.search-icon-placeholder {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1rpx solid #ccc; /* Placeholder for the circle icon */
+}
+
+
+.group-list {
+  margin: 0 30rpx;
+}
+
+.group-item {
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  padding: 25rpx;
+  margin-bottom: 25rpx;
+  display: flex;
+  justify-content: space-between; /* Pushes button to the right */
+  align-items: center; /* Vertically aligns items */
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+
+.group-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.group-details {
+  font-size: 28rpx;
+  color: #555555;
+  margin-bottom: 4rpx;
+}
+
+.group-expiry {
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.view-button {
+  background-color: #eeeeee; 
+  color: #555555;
+  border-radius: 30rpx;
+  padding: 8rpx 25rpx;
+  font-size: 24rpx;
+  margin-left: 20rpx; /* Space between text and button */
+  line-height: 1.5; /* Adjusts line height for mini buttons */
+  border: none;
+}
+
+
+.create-button-container {
+  padding: 30rpx; /* Add padding around the button */
+  margin-top: 10rpx;
+}
+.create-button {
+  background-color: #2ecc71; 
+  color: #ffffff;
+  border-radius: 15rpx;
+  font-size: 32rpx;
+  width: 100%; /* Make button full width within its container */
+}
+
+/* Bottom Navigation */
+.tab-bar {
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110rpx; 
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  border-top: 1rpx solid #e0e0e0;
+  box-shadow: 0 -2rpx 5rpx rgba(0, 0, 0, 0.05);
+  z-index: 100; 
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative; 
+}
+
+.tab-icon-placeholder {
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  background-color: #e0e0e0; 
+  margin-bottom: 5rpx;
+}
+.tab-icon-indicator {
+   width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  background-color: #e0e0e0; 
+  margin-bottom: 5rpx;
+}
+
+.tab-label {
+  font-size: 22rpx;
+  color: #888888;
+}
+
+
+.tab-item.active .tab-icon-indicator {
+  background-color: #2ecc71; 
+}
+
+.tab-item.active .tab-label {
+  color: #333333; 
+}

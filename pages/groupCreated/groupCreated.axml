@@ -1,0 +1,27 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Group Created!</text>
+  </view>
+
+  <view class="content-area">
+    <view class="success-icon-container">
+      <view class="checkmark-symbol"></view>
+    </view>
+
+    <view class="confirmation-text">
+      <text class="success-title">Group Successfully Created</text>
+      <text class="group-id-text">Group ID: {{groupId}}</text>
+    </view>
+
+    <view class="group-summary">
+       <text class="summary-title">{{summary.name}}</text>
+       <text class="summary-detail">Members: {{summary.memberCount}} (including you)</text>
+       <text class="summary-detail">Valid until: {{summary.validUntil}}</text>
+       <text class="summary-detail">Approval: 50% + 1 members</text> <text class="summary-detail">Wallet Balance: KES {{summary.balance}}</text>
+    </view>
+
+    <button class="add-funds-button" type="primary" onTap="onAddFundsTap">Add Funds Now</button>
+    <button class="go-to-group-button" type="default" onTap="onGoToGroupTap">Go to Group</button>
+
+  </view>
+</view>

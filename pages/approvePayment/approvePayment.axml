@@ -1,0 +1,41 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Approve Payment</text>
+  </view>
+
+  <view class="content-area">
+    <view class="details-card">
+      <text class="bill-title">{{paymentDetails.title}}</text>
+      <text class="amount">KES {{paymentDetails.amount}}</text>
+      <text class="detail-text">Requested by: {{paymentDetails.requestedBy}}</text>
+      <text class="detail-text">Group: {{paymentDetails.groupName}}</text>
+      <text class="detail-text">Approval so far: {{paymentDetails.approvals}} / {{paymentDetails.requiredApprovals}} members</text>
+       </view>
+
+    <view class="receipt-section">
+      <text class="section-label">Receipt</text>
+      <view class="receipt-view-area">
+         <image a:if="{{paymentDetails.receiptThumbnail}}" class="receipt-thumbnail-display" src="{{paymentDetails.receiptThumbnail}}" mode="aspectFit"/>
+         <button class="view-receipt-button" size="mini" onTap="onViewReceiptTap" disabled="{{!paymentDetails.receiptUrl}}">
+            {{paymentDetails.receiptUrl ? 'View Receipt' : 'No Receipt'}}
+         </button>
+      </view>
+    </view>
+
+    <view class="vote-section" a:if="{{!hasVoted}}"> <text class="section-label">Your Vote</text>
+        <view class="vote-buttons">
+            <button class="vote-button approve-button" onTap="onVoteTap" data-vote="approve">Approve</button>
+            <button class="vote-button reject-button" onTap="onVoteTap" data-vote="reject">Reject</button>
+        </view>
+    </view>
+     <view class="voted-message" a:else> <text>You have already voted on this request.</text>
+     </view>
+
+
+    <view class="comment-section">
+      <text class="section-label">Add Comment (Optional)</text>
+      <textarea class="textarea-field" placeholder="Add your comment here..." value="{{comment}}" onInput="handleInput" data-field="comment" disabled="{{hasVoted}}"/>
+    </view>
+
+     </view>
+</view>

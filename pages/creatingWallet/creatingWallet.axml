@@ -1,0 +1,23 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Creating Group Wallet</text>
+  </view>
+
+  <view class="content-area">
+    <view class="progress-indicator">
+      <view class="spinner"></view>
+      <text class="progress-text">Processing...</text>
+    </view>
+
+    <view class="status-list">
+      <block a:for="{{statusSteps}}" a:key="id">
+        <view class="status-item {{item.done ? 'done' : ''}}">
+          <icon class="status-icon" type="success" size="18" color="{{item.done ? '#2ecc71' : '#cccccc'}}"/>
+          <text class="status-text">{{item.text}}</text>
+        </view>
+      </block>
+    </view>
+
+    <button class="cancel-button" type="text" onTap="onCancelTap">Cancel</button>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+/* pages/walletExpiration/walletExpiration.acss */
+.page-container { display: flex; flex-direction: column; min-height: 100vh; background-color: #f4f4f4; }
+.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
+.header-title { font-size: 36rpx; font-weight: bold; }
+
+.content-area { padding: 30rpx; flex-grow: 1; }
+
+/* Info Card */
+.info-card {
+  background-color: #ffffff;
+  padding: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+.group-name { display: block; font-size: 28rpx; color: #666; margin-bottom: 15rpx; }
+.expiry-status { display: block; font-size: 32rpx; font-weight: bold; color: #e67e22; /* Default warning color */ margin-bottom: 8rpx; }
+.expiry-status.urgent { color: #e74c3c; /* Red for very urgent? */ }
+.detail-text { display: block; font-size: 28rpx; color: #555; margin-bottom: 8rpx; line-height: 1.4; }
+.detail-text.note { font-size: 26rpx; color: #888; margin-top: 10rpx; }
+
+/* Options Section */
+.options-section { margin-bottom: 40rpx; }
+.section-title { display: block; font-size: 30rpx; font-weight: bold; color: #333; margin-bottom: 20rpx;}
+
+.option-item {
+  background-color: #ffffff;
+  padding: 25rpx 30rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 1rpx 4rpx rgba(0, 0, 0, 0.04);
+  border: 1rpx solid #eee;
+  /* Add active state for visual feedback on tap */
+}
+.option-item:active {
+    background-color: #f8f8f8;
+}
+.option-title { display: block; font-size: 30rpx; font-weight: 500; color: #333; margin-bottom: 5rpx; }
+.option-description { display: block; font-size: 26rpx; color: #777; }
+
+/* Back Button */
+.back-button {
+  color: #2ecc71;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 100%;
+  margin-top: 20rpx;
+  padding: 15rpx 0;
+  font-size: 28rpx;
+}
+.back-button::after { border: none; }

@@ -1,0 +1,37 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Request Bill Payment</text>
+  </view>
+
+  <view class="form-container">
+    <view class="form-item">
+      <text class="label">Bill Title</text>
+      <input class="input-field" placeholder="e.g., Hotel Booking" value="{{billTitle}}" onInput="handleInput" data-field="billTitle"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Amount (KES)</text>
+      <input class="input-field" type="digit" placeholder="e.g., 5000" value="{{amount}}" onInput="handleInput" data-field="amount"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Description</text>
+      <textarea class="textarea-field" placeholder="Provide details about this expense" value="{{description}}" onInput="handleInput" data-field="description"/>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Upload Receipt</text>
+      <view class="upload-area" onTap="onUploadTap">
+        <image a:if="{{receiptImage}}" class="receipt-thumbnail" src="{{receiptImage}}" mode="aspectFit"/>
+        <text a:else class="upload-text">Tap to Upload</text>
+      </view>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Payee Information</text>
+      <input class="input-field" placeholder="Phone / Till Number" value="{{payeeInfo}}" onInput="handleInput" data-field="payeeInfo"/>
+    </view>
+
+    <button class="submit-button" type="primary" onTap="onSubmitTap">Submit for Approval</button>
+  </view>
+</view>

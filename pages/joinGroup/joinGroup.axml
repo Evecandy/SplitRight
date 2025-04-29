@@ -1,0 +1,30 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Join Group</text>
+  </view>
+
+  <view class="content-area">
+    <view class="info-card group-details-card">
+      <text class="group-title">{{groupDetails.title}}</text>
+      <view class="detail-item"><text class="detail-label">Admin:</text> <text class="detail-value">{{groupDetails.admin}}</text></view>
+      <view class="detail-item"><text class="detail-label">Members:</text> <text class="detail-value">{{groupDetails.members}}</text></view>
+      <view class="detail-item"><text class="detail-label">Valid until:</text> <text class="detail-value">{{groupDetails.validUntil}}</text></view>
+      <view class="detail-item"><text class="detail-label">Purpose:</text> <text class="detail-value purpose">{{groupDetails.purpose}}</text></view>
+      <view class="detail-item"><text class="detail-label">Payment Approval:</text> <text class="detail-value">{{groupDetails.approval}}</text></view>
+    </view>
+
+    <view class="agreement-section">
+      <text class="agreement-title">By joining, you agree to:</text>
+      <text class="agreement-point">• Receive notifications for group activities</text>
+      <text class="agreement-point">• Submit initial contribution (optional)</text>
+    </view>
+
+    <view class="terms-section" onTap="toggleTerms">
+      <checkbox class="terms-checkbox" value="agree" checked="{{termsAgreed}}" onChange="onTermsChange"/>
+      <text class="terms-label">I agree to the terms</text>
+    </view>
+
+    <button class="action-button join-button" type="primary" onTap="onJoinTap" disabled="{{!termsAgreed}}">Join Group</button>
+    <button class="action-button cancel-button" type="default" onTap="onCancelTap">Cancel</button>
+  </view>
+</view>

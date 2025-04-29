@@ -1,0 +1,23 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">SplitRight</text>
+  </view>
+
+  <view class="content-area">
+    <view class="checkmark-icon-container">
+      <view class="checkmark-symbol"></view>
+    </view>
+
+    <view class="text-block">
+      <text class="welcome-title">Welcome to SplitRight</text>
+      <text class="welcome-subtitle">Group expenses made simple</text>
+      <text class="welcome-description">Contribute to group wallets, pay bills together</text>
+    </view>
+
+    <button class="get-started-button" type="primary" onTap="onGetStartedTap">Get Started</button>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">Powered by M-Pesa</text>
+  </view>
+</view>

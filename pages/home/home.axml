@@ -1,0 +1,29 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">My Groups</text>
+  </view>
+
+  <view class="search-container">
+    <input class="search-input" placeholder="Search groups..." onInput="onSearchInput" />
+    <view class="search-icon-placeholder"></view>
+  </view>
+
+  <view class="group-list">
+    <block a:for="{{groups}}" a:key="id">
+      <view class="group-item">
+        <view class="group-info">
+          <text class="group-title">{{item.title}}</text>
+          <text class="group-details">KES {{item.amount}} · {{item.members}} members</text>
+          <text class="group-expiry">Expires: {{item.expiry}}</text>
+        </view>
+        <button class="view-button" size="mini" onTap="onViewTap" data-id="{{item.id}}">View</button>
+      </view>
+    </block>
+  </view>
+
+  <view class="create-button-container">
+    <button class="create-button" type="primary" onTap="onCreateTap">+ Create New Group</button>
+  </view>
+
+
+</view>

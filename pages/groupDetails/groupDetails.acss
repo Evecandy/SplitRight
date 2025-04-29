@@ -1,0 +1,130 @@
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #2ecc71;
+  padding: 25rpx 30rpx;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.content-area {
+  padding: 30rpx;
+  flex-grow: 1;
+}
+
+
+.wallet-card {
+  background-color: #ffffff;
+  padding: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+
+.wallet-section-title {
+    display: block;
+    font-size: 28rpx;
+    color: #888;
+    margin-bottom: 15rpx;
+}
+
+.wallet-amount {
+  display: block; /* Ensure it takes full width */
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.wallet-details {
+  display: block; /* Each on new line */
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 5rpx;
+}
+
+.contribute-button {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border-radius: 30rpx;
+  padding: 8rpx 30rpx;
+  font-size: 26rpx;
+  margin-top: 25rpx;
+  display: inline-block; /* Don't take full width */
+  border: none;
+}
+
+
+.activity-section {
+  margin-top: 20rpx;
+}
+
+.activity-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.activity-list {
+  background-color: #ffffff;
+  padding: 0 30rpx; /* Padding inside the list container */
+  border-radius: 15rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25rpx 0; /* Padding top/bottom only */
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.activity-item:last-child {
+    border-bottom: none; /* Remove border for last item */
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-description {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 5rpx;
+}
+
+.activity-meta {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.activity-amount {
+  font-size: 30rpx;
+  color: #333;
+  font-weight: 500;
+}
+.no-activity {
+    padding: 30rpx 0;
+    text-align: center;
+    color: #888;
+    font-size: 28rpx;
+}
+
+.request-payment-button {
+  background-color: #2ecc71;
+  color: #ffffff;
+}

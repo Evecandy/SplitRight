@@ -1,0 +1,78 @@
+
+.page-container { display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
+.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
+.header-title { font-size: 36rpx; font-weight: bold; }
+
+.content-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+  text-align: center;
+}
+
+/* Success Icon - Reused it from welcome screen */
+.success-icon-container {
+  width: 180rpx;
+  height: 180rpx;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+.checkmark-symbol {
+  width: 40rpx;
+  height: 80rpx;
+  border: solid #ffffff;
+  border-width: 0 12rpx 12rpx 0;
+  transform: rotate(45deg) translateY(-10rpx);
+}
+
+
+.confirmation-text { margin-bottom: 40rpx; }
+.success-title { font-size: 36rpx; font-weight: bold; color: #333; margin-bottom: 10rpx; display: block;}
+.group-id-text { font-size: 28rpx; color: #666; display: block;}
+
+
+.group-summary {
+    background-color: #f9f9f9;
+    border: 1rpx solid #eee;
+    border-radius: 10rpx;
+    padding: 30rpx;
+    margin-bottom: 50rpx;
+    text-align: left; /* Align text left within summary */
+    width: 90%; 
+}
+.summary-title { display: block; font-size: 30rpx; font-weight: bold; color: #333; margin-bottom: 15rpx;}
+.summary-detail { display: block; font-size: 26rpx; color: #555; margin-bottom: 8rpx; line-height: 1.4;}
+
+
+.add-funds-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 10rpx;
+  padding: 25rpx 0;
+  font-size: 32rpx;
+  width: 80%; 
+  margin-bottom: 20rpx;
+}
+
+.go-to-group-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #2ecc71;
+  border: 1rpx solid #2ecc71;
+  border-radius: 10rpx;
+  padding: 25rpx 0;
+  font-size: 32rpx;
+  width: 80%; /* Adjust width */
+}

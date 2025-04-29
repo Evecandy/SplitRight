@@ -1,0 +1,56 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Create New Group</text>
+  </view>
+
+  <view class="form-container">
+    <view class="form-item">
+      <text class="label">Group Name</text>
+      <input
+        class="input-field"
+        placeholder="e.g., Weekend Trip"
+        value="{{groupName}}"
+        onInput="handleInput"
+        data-field="groupName"
+      />
+    </view>
+
+    <view class="form-item">
+      <text class="label">Description</text>
+      <textarea
+        class="textarea-field"
+        placeholder="e.g., Beach vacation expenses"
+        value="{{description}}"
+        onInput="handleInput"
+        data-field="description"
+      />
+    </view>
+
+    <view class="form-item">
+      <text class="label">Valid Until</text>
+      <picker mode="date" onChange="onDateChange" value="{{validUntil}}">
+        <view class="picker-display">
+          {{validUntil || 'Select end date'}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">Cash back/Redistribution Method</text>
+      <radio-group class="radio-group" onChange="onRadioChange" name="splitMethod">
+        <label class="radio-option">
+          <radio value="equal" checked="{{splitMethod === 'equal'}}" />Equal Split
+          <text class="option-description">Everyone receives equal amount</text>
+        </label>
+        <label class="radio-option">
+          <radio value="proportional" checked="{{splitMethod === 'proportional'}}" />Proportional Split
+          <text class="option-description">Based on contribution percentage</text>
+        </label>
+      </radio-group>
+    </view>
+
+    <button class="create-group-button" type="primary" onTap="onCreateGroupTap">
+      Create Group
+    </button>
+  </view>
+</view>

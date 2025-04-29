@@ -1,0 +1,36 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">Add Group Members</text>
+  </view>
+
+  <view class="content-area">
+    <view class="group-info-display">
+      <text class="group-info-title">{{groupDetails.name}}</text>
+      <text class="group-info-meta">Valid until: {{groupDetails.date}}</text>
+      <text class="group-info-meta">Approval: 50% + 1 members</text> </view>
+
+    <view class="form-item">
+      <text class="label">Add Phone Number</text>
+      <view class="input-group">
+        <input class="input-field member-input" placeholder="Enter phone number" keyboard="number" value="{{memberInput}}" onInput="handleInput" data-field="memberInput"/>
+        <button class="add-button" size="mini" type="primary" onTap="onAddMemberTap">+</button>
+      </view>
+    </view>
+
+    <view class="added-members-section">
+      <text class="section-title">Added Members ({{addedMembers.length}})</text>
+      <view class="member-list">
+        <block a:if="{{addedMembers.length > 0}}" a:for="{{addedMembers}}" a:key="index">
+           <view class="member-item">
+            <text class="member-name-number">{{item.name || item.number}}</text>
+             <button class="remove-member-button" size="mini" type="warn" onTap="onRemoveMemberTap" data-index="{{index}}" a:if="{{index > 0}}">✕</button>
+           </view>
+        </block>
+        <view class="no-members">No members added yet.</view>
+      </view>
+    </view>
+
+    <button class="create-wallet-button" type="primary" onTap="onCreateWalletTap">Create Group Wallet</button>
+    <button class="back-button" type="text" onTap="onBackTap">Back</button>
+  </view>
+</view>

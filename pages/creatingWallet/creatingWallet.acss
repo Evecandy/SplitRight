@@ -1,0 +1,63 @@
+/* pages/creatingWallet/creatingWallet.acss */
+.page-container { display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
+.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
+.header-title { font-size: 36rpx; font-weight: bold; }
+
+.content-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+  text-align: center;
+}
+
+/* Progress Indicator */
+.progress-indicator { margin-bottom: 60rpx; }
+
+/* Basic CSS Spinner */
+.spinner {
+  width: 150rpx;
+  height: 150rpx;
+  border: 16rpx solid #f3f3f3; /* Light grey */
+  border-top: 16rpx solid #2ecc71; /* Green */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 30rpx auto; /* Center spinner */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.progress-text { font-size: 32rpx; color: #555; }
+
+/* Status List */
+.status-list { margin-bottom: 60rpx; width: 80%; /* Limit width */ text-align: left; }
+.status-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+  opacity: 0.5; /* Default state */
+  transition: opacity 0.3s ease;
+}
+.status-item.done { opacity: 1; }
+
+.status-icon { margin-right: 15rpx; flex-shrink: 0; }
+.status-text { font-size: 28rpx; color: #555; }
+.status-item.done .status-text { color: #333; }
+
+/* Cancel Button */
+.cancel-button {
+  color: #888888;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: auto;
+  margin-top: 20rpx;
+  padding: 15rpx 30rpx;
+  font-size: 28rpx;
+}
+.cancel-button::after { border: none; }

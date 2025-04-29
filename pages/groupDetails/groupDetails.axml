@@ -1,0 +1,33 @@
+<view class="page-container">
+  <view class="header">
+    <text class="header-title">{{groupDetails.title}}</text>
+  </view>
+  <text>Group details page</text>
+  <view class="content-area">
+    <view class="wallet-card">
+      <text class="wallet-section-title">Group Wallet</text>
+      <text class="wallet-amount">KES {{groupDetails.amount}}</text>
+      <text class="wallet-details">{{groupDetails.members}} members</text>
+      <text class="wallet-details" onTap="onExpireTap">Expires: {{groupDetails.expires}}</text>
+      <button class="contribute-button" type="primary" size="mini" onTap="onContributeTap">Contribute</button>
+    </view>
+    <button class="request-payment-button" type="primary" onTap="onRequestPaymentTap">
+      Request Payment
+   </button>
+    <view class="activity-section">
+      <text class="activity-title">Recent Activity</text>
+      <view class="activity-list">
+        <block a:if="{{recentActivity.length > 0}}" a:for="{{recentActivity}}" key="id">
+          <view class="activity-item">
+            <view class="activity-info">
+              <text class="activity-description">{{item.description}}</text>
+              <text class="activity-meta">{{item.meta}}</text> </view>
+            <text class="activity-amount">KES {{item.amount}}</text>
+          </view>
+        </block>
+        <view class="no-activity">No recent activity.</view>
+        
+      </view>
+    </view>
+  </view>
+</view>

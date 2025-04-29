@@ -1,0 +1,98 @@
+
+.page-container { background-color: #f4f4f4; min-height: 100vh; display: flex; flex-direction: column;}
+.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
+.header-title { font-size: 36rpx; font-weight: bold; }
+
+.content-area { padding: 30rpx; flex-grow: 1; }
+
+.group-info-display {
+    background-color: #fff;
+    padding: 25rpx;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    border: 1rpx solid #e0e0e0;
+}
+.group-info-title { display: block; font-size: 32rpx; font-weight: bold; color: #333; margin-bottom: 10rpx;}
+.group-info-meta { display: block; font-size: 26rpx; color: #666; margin-bottom: 5rpx;}
+
+.form-item { margin-bottom: 30rpx; }
+.label { display: block; font-size: 28rpx; color: #333; margin-bottom: 10rpx; font-weight: 500; }
+.input-group { display: flex; align-items: center; }
+.input-field {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 8rpx;
+  padding: 18rpx 20rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+.member-input { flex-grow: 1; margin-right: 15rpx;height: 40px; }
+.add-button {
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 8rpx;
+  padding: 15rpx 25rpx;
+  line-height: 1;
+  font-size: 36rpx;
+  font-weight: bold;
+  border: none;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.added-members-section { margin-top: 20rpx; }
+.section-title { display: block; font-size: 30rpx; font-weight: bold; color: #333; margin-bottom: 15rpx;}
+
+.member-list { background-color: #fff; border-radius: 10rpx; border: 1rpx solid #e0e0e0; padding: 0 25rpx;}
+.member-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx 0;
+    border-bottom: 1rpx solid #f0f0f0;
+}
+.member-item:last-child { border-bottom: none; }
+
+.member-name-number { font-size: 30rpx; color: #333; }
+
+.remove-member-button {
+  background-color: #e74c3c; 
+  color: white;
+  border-radius: 50%; 
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx; /* Center text vertically */
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  border: none;
+  padding: 0; /* Remove default padding */
+}
+.no-members { padding: 30rpx 0; text-align: center; color: #888; font-size: 28rpx;}
+
+.create-wallet-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ecc71;
+  color: white;
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 25rpx 0;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+
+}
+
+.back-button {
+  color: #2ecc71;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  width: 100%;
+  margin-top: 20rpx;
+  padding: 15rpx 0;
+  font-size: 28rpx;
+}
+
+.back-button::after { border: none; }

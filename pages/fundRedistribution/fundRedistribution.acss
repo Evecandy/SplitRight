@@ -1,0 +1,74 @@
+/* pages/fundsRedistribution/fundsRedistribution.acss */
+.page-container { display: flex; flex-direction: column; min-height: 100vh; background-color: #f4f4f4; }
+.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
+.header-title { font-size: 36rpx; font-weight: bold; }
+
+.content-area { padding: 30rpx; flex-grow: 1; }
+
+/* Summary Card */
+.summary-card {
+  background-color: #ffffff;
+  padding: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.05);
+}
+.group-name { display: block; font-size: 28rpx; color: #666; margin-bottom: 15rpx; }
+.detail-text { display: block; font-size: 28rpx; color: #555; margin-bottom: 8rpx; line-height: 1.4; }
+
+/* Method Section */
+.method-section { margin-bottom: 40rpx; }
+.section-label { display: block; font-size: 28rpx; color: #333; margin-bottom: 15rpx; font-weight: 500; }
+
+.method-display {
+    display: flex;
+    align-items: center;
+    padding: 20rpx;
+    background-color: #ffffff;
+    border: 1rpx solid #eee;
+    border-radius: 10rpx;
+    margin-bottom: 15rpx;
+    opacity: 0.5; /* Default dim look */
+}
+.method-display.selected {
+    opacity: 1;
+    border-color: #b8e9c7; /* Light green border */
+}
+.method-icon {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    border: 2rpx solid #cccccc; /* Grey border for icon */
+    margin-right: 20rpx;
+    background-color: #f0f0f0; /* Grey fill for icon */
+    flex-shrink: 0;
+}
+.method-icon.selected {
+    background-color: #2ecc71; /* Green fill */
+    border-color: #2ecc71; /* Green border */
+}
+.method-text { font-size: 28rpx; color: #555; }
+
+/* Share Section */
+.share-section { margin-bottom: 40rpx; }
+.share-display {
+    background-color: #f9f9f9;
+    border: 1rpx solid #eee;
+    border-radius: 10rpx;
+    padding: 30rpx;
+    text-align: center;
+}
+.share-label { display: block; font-size: 28rpx; color: #666; margin-bottom: 10rpx; }
+.share-amount { display: block; font-size: 44rpx; font-weight: bold; color: #2ecc71; }
+
+/* Action Buttons */
+.action-button {
+  width: 100%;
+  padding: 25rpx 0;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.confirm-button {display: flex; align-items: center;justify-content: center; background-color: #2ecc71; color: white; }
+.view-summary-button {display: flex; align-items: center;justify-content: center; background-color: #eeeeee; color: #555; border: 1rpx solid #e0e0e0; }
+.view-summary-button::after { border: none; }
