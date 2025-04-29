@@ -39,6 +39,11 @@
       "title": "pages/groupCreated/groupCreated",
       "page": "pages/createGroup/createGroup",
       "pageQuery": ""
+    },
+    {
+      "title": "pages/index/index",
+      "page": "pages/index/index",
+      "pageQuery": ""
     }
   ]
 }

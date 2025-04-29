@@ -1,27 +1,29 @@
-<view class="page-container">
+<view class="page">
   <view class="header">
-    <text class="header-title">Group Created!</text>
+    <text class="header-text">Group Created!</text>
   </view>
-
-  <view class="content-area">
-    <view class="success-icon-container">
-      <view class="checkmark-symbol"></view>
+  
+  <view class="content">
+    <view class="success-icon">
+      <icon type="success" size="60" color="#4CAF50" />
     </view>
-
-    <view class="confirmation-text">
-      <text class="success-title">Group Successfully Created</text>
-      <text class="group-id-text">Group ID: {{groupId}}</text>
+    
+    <text class="success-text">Group Successfully Created</text>
+    
+    <view class="group-info">
+      <text class="info-line">Group ID: {{group.id}}</text>
+      <text class="info-line">{{group.name}}</text>
+      <text class="info-line">Members: {{group.memberCount}} (including you)</text>
+      <text class="info-line">Valid until: {{group.validUntil}}</text>
+      <text class="info-line">Approval: {{group.approvalRate}} of members</text>
+      <text class="info-line">Wallet Balance: KES {{group.walletBalance}}</text>
     </view>
-
-    <view class="group-summary">
-       <text class="summary-title">{{summary.name}}</text>
-       <text class="summary-detail">Members: {{summary.memberCount}} (including you)</text>
-       <text class="summary-detail">Valid until: {{summary.validUntil}}</text>
-       <text class="summary-detail">Approval: 50% + 1 members</text> <text class="summary-detail">Wallet Balance: KES {{summary.balance}}</text>
-    </view>
-
-    <button class="add-funds-button" type="primary" onTap="onAddFundsTap">Add Funds Now</button>
-    <button class="go-to-group-button" type="default" onTap="onGoToGroupTap">Go to Group</button>
-
+    
+    <button class="primary-button" onTap="addFunds">Add Funds Now</button>
+    <button class="secondary-button" onTap="goToGroup">Go to Group</button>
+  </view>
+  
+  <view class="loading-overlay" a:if="{{loading}}">
+    <loading />
   </view>
 </view>

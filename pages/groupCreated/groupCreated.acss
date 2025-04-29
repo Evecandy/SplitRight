@@ -1,78 +1,81 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 
-.page-container { display: flex; flex-direction: column; min-height: 100vh; background-color: #ffffff; }
-.header { background-color: #2ecc71; padding: 25rpx 30rpx; text-align: center; color: #ffffff; }
-.header-title { font-size: 36rpx; font-weight: bold; }
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+}
 
-.content-area {
-  flex-grow: 1;
+.header-text {
+  font-size: 18px;
+}
+
+.content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 40rpx;
-  text-align: center;
+  padding: 24px 16px;
 }
 
-/* Success Icon - Reused it from welcome screen */
-.success-icon-container {
-  width: 180rpx;
-  height: 180rpx;
-  background-color: #2ecc71;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40rpx;
-}
-.checkmark-symbol {
-  width: 40rpx;
-  height: 80rpx;
-  border: solid #ffffff;
-  border-width: 0 12rpx 12rpx 0;
-  transform: rotate(45deg) translateY(-10rpx);
+.success-icon {
+  margin: 24px 0;
 }
 
-
-.confirmation-text { margin-bottom: 40rpx; }
-.success-title { font-size: 36rpx; font-weight: bold; color: #333; margin-bottom: 10rpx; display: block;}
-.group-id-text { font-size: 28rpx; color: #666; display: block;}
-
-
-.group-summary {
-    background-color: #f9f9f9;
-    border: 1rpx solid #eee;
-    border-radius: 10rpx;
-    padding: 30rpx;
-    margin-bottom: 50rpx;
-    text-align: left; /* Align text left within summary */
-    width: 90%; 
+.success-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
-.summary-title { display: block; font-size: 30rpx; font-weight: bold; color: #333; margin-bottom: 15rpx;}
-.summary-detail { display: block; font-size: 26rpx; color: #555; margin-bottom: 8rpx; line-height: 1.4;}
 
+.group-info {
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
 
-.add-funds-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2ecc71;
+.info-line {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.primary-button {
+  background-color: #4CAF50;
   color: white;
-  border-radius: 10rpx;
-  padding: 25rpx 0;
-  font-size: 32rpx;
-  width: 80%; 
-  margin-bottom: 20rpx;
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
-.go-to-group-button {
+.secondary-button {
+  background-color: white;
+  color: #4CAF50;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #4CAF50;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  color: #2ecc71;
-  border: 1rpx solid #2ecc71;
-  border-radius: 10rpx;
-  padding: 25rpx 0;
-  font-size: 32rpx;
-  width: 80%; /* Adjust width */
+  align-items: center;
 }
