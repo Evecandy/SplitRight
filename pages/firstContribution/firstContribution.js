@@ -67,7 +67,7 @@ Page({
     console.log('Skip for Now tapped. Group ID:', this.data.groupId);
   
     my.redirectTo({ 
-      url: `/pages/groupDetail/groupDetails?id=${this.data.groupId}`
+      url: `/pages/groupDetails/groupDetails?id=${this.data.groupId}`
     });
   }
 });

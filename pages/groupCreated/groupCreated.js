@@ -13,7 +13,7 @@ Page({
   },
 
   onLoad: function(query) {
-    // Get the group ID from the URL parameters
+    // Get the group ID 
     const groupId = query.groupId || '';
     console.log('Group Created page loaded with ID:', groupId);
     
@@ -90,10 +90,10 @@ Page({
     }
   },
   
-  // Navigate to add funds page
+  // Navigate to add firstContribution page
   addFunds: function() {
     my.navigateTo({
-      url: `/pages/addFunds/addFunds?groupId=${encodeURIComponent(this.data.groupId)}`
+      url: `/pages/firstContribution/firstContribution?groupId=${encodeURIComponent(this.data.groupId)}`
     });
   },
   

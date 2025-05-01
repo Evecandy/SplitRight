@@ -14,7 +14,7 @@
       <text class="welcome-description">Contribute to group wallets, pay bills together</text>
     </view>
 
-    <button class="get-started-button" type="primary" onTap="onGetStartedTap">Get Started</button>
+    <ant-button class="get-started-button" type="primary" onTap="onGetStartedTap">Get Started</ant-button>
   </view>
 
   <view class="footer">

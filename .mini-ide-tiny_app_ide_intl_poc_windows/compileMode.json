@@ -1,54 +1,9 @@
 {
   "modes": [
     {
-      "title": "pages/createGroup/createGroup",
-      "page": "pages/groupCreated/groupCreated",
+      "title": "custom page",
+      "page": "pages/home/home",
       "pageQuery": ""
-    },
-    {
-      "title": "pages/home/home",
-      "page": "pages/AddMembers/AddMembers",
-      "pageQuery": ""
-    },
-    {
-      "title": "pages/groupCreated/groupCreated",
-      "page": "pages/groupCreated/groupCreated",
-      "pageQuery": "groupId=WKD-2025-LMTKGB"
-    },
-    {
-      "title": "pages/approvePayment/approvePayment",
-      "page": "pages/requestPayment/requestPayment",
-      "pageQuery": "groupId=WKD-2025-LMTKGB"
-    },
-    {
-      "title": "pages/requestPayment/requestPayment",
-      "page": "pages/approvePayment/approvePayment",
-      "pageQuery": "groupId=WKD-2025-LMTKGB"
-    },
-    {
-      "title": "pages/paymentApproved/paymentApproved",
-      "page": "pages/walletExpiration/walletExpiration",
-      "pageQuery": "id=null"
-    },
-    {
-      "title": "pages/walletExpiration/walletExpiration",
-      "page": "pages/index/index",
-      "pageQuery": "id=null"
-    },
-    {
-      "title": "pages/groupCreated/groupCreated",
-      "page": "pages/createGroup/createGroup",
-      "pageQuery": ""
-    },
-    {
-      "title": "pages/index/index",
-      "page": "pages/index/index",
-      "pageQuery": ""
-    },
-    {
-      "title": "pages/AddMembers/AddMembers",
-      "page": "pages/AddMembers/AddMembers",
-      "pageQuery": "groupId=WKD-2025-T4BFEN"
     }
   ]
 }
