@@ -12,11 +12,11 @@
     <block a:for="{{groups}}" a:key="id">
       <view class="group-item">
         <view class="group-info">
-          <text class="group-title">{{item.title}}</text>
+          <text class="group-title">{{item.name}}</text>
           <text class="group-details">KES {{item.amount}} · {{item.members}} members</text>
           <text class="group-expiry">Expires: {{item.expiry}}</text>
         </view>
-        <button class="view-button" size="mini" onTap="onViewTap" data-id="{{item.id}}">View</button>
+        <button class="view-button" size="mini" onTap="onViewTap" data-id="{{item}}">View</button>
       </view>
     </block>
   </view>
