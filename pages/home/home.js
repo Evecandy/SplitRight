@@ -40,9 +40,9 @@ Page({
   },
   onViewTap(eve){
     console.log("eve",eve.target.dataset.id)
-    
+    const  detailsRetrieved=JSON.stringify(eve.target.dataset.id)
     my.navigateTo({
-      url: '/pages/groupDetails/groupDetails'
+      url: `/pages/groupDetails/groupDetails?data=${detailsRetrieved}`
     })
   },
   onCreateTap(){

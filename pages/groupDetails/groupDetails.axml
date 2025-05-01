@@ -1,6 +1,6 @@
 <view class="page-container">
   <view class="header">
-    <text class="header-title">{{groupDetails.title}}</text>
+    <text class="header-title">{{groupDetails.name}}</text>
   </view>
   <text>Group details page</text>
   <view class="content-area">
@@ -8,7 +8,7 @@
       <text class="wallet-section-title">Group Wallet</text>
       <text class="wallet-amount">KES {{groupDetails.amount}}</text>
       <text class="wallet-details">{{groupDetails.members}} members</text>
-      <text class="wallet-details" onTap="onExpireTap">Expires: {{groupDetails.expires}}</text>
+      <text class="wallet-details" onTap="onExpireTap">Expires: {{groupDetails.expiry}}</text>
       <button class="contribute-button" type="primary" size="mini" onTap="onContributeTap">Contribute</button>
     </view>
     <button class="request-payment-button" type="primary" onTap="onRequestPaymentTap">

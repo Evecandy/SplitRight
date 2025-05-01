@@ -49,11 +49,27 @@ Page({
 
     console.log('Add Contribution tapped. Amount:', amount, 'Group ID:', this.data.groupId);
     my.redirectTo({
-      url: '/pages/groupDetail/groupDetails',
+      url: '/pages/groupDetails/groupDetails',
     });
    
   
    my.showLoading({ content: 'Adding...' });
+   my.call('buyGoods', {
+    tillNumber: '12345',
+    amount: amount,
+    currency: 'KES', // currencyCode to be used - only KES supported for now
+    reason: 'Jon Groceries', // optional field
+    success: function(res) {            
+      my.alert({
+       content: JSON.stringify(res),
+      });
+    },
+    fail: function(res) {  
+      my.alert({
+        content: JSON.stringify(res),
+      });
+   },
+});
    setTimeout(() => {
        my.hideLoading();
        my.showToast({ content: 'Contribution added!', type: 'success' });
