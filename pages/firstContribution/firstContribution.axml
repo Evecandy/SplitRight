@@ -5,9 +5,8 @@
 
   <view class="content-area">
     <view class="info-card group-info-card">
-      <text class="group-title">{{groupInfo.title}}</text>
-      <text class="group-subtitle">{{groupInfo.subtitle}}</text>
-      <text class="group-balance">Current Balance: KES {{groupInfo.balance}}</text>
+      <text class="group-title">{{groupInfo.name}}</text>
+      <text class="group-balance">Current Balance: KES {{groupInfo.amount}}</text>
     </view>
 
     <view class="info-card text-info-card">

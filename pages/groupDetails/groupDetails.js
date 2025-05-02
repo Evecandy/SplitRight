@@ -45,10 +45,12 @@ Page({
     })
   },
   onContributeTap() {
-    console.log('Contribute tapped for group:', this.data.groupId);
-   
-    my.navigateTo({ url: '/pages/firstContribution/firstContribution?groupId=' + this.data.groupId });
-  },
+    console.log('Contribute tapped for group:',this.data.groupDetails)
+    const  detailsRetrieved=JSON.stringify(this.data.groupDetails)
+    my.navigateTo({
+      url: `/pages/firstContribution/firstContribution?data=${detailsRetrieved}`
+    })
+    },
   onRequestPaymentTap() {
     const groupId = this.data.groupId;
    

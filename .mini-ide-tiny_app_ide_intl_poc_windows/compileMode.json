@@ -2,7 +2,7 @@
   "modes": [
     {
       "title": "custom page",
-      "page": "pages/home/home",
+      "page": "pages/groupDetails/groupDetails",
       "pageQuery": ""
     }
   ]
