@@ -1,13 +1,10 @@
-// pages/welcome/welcome.js
+// pages/welcome/welcome.js - a static page
 Page({
   data: {
     
   },
 
-  onLoad(query) {
-    // Page load
-    console.log('Welcome page loaded');
-  },
+ 
 
   onGetStartedTap() {
     console.log('Get Started tapped');

@@ -7,7 +7,7 @@ Page({
   },
   onLoad(){
     my.showLoading();
-    //making API call
+    //making API call from mocki.io
     my.request({
       url: 'https://mocki.io/v1/ea0e4b05-5d78-4baa-adf6-41f62e38862e',
       method: 'GET',

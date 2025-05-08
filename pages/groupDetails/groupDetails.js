@@ -40,7 +40,7 @@ Page({
   //   }
   // },
   onExpireTap() {
-    my.navigateTo({
+    my.redirectTo({
       url: `/pages/walletExpiration/walletExpiration`
     })
   },

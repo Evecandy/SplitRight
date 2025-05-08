@@ -9,7 +9,7 @@
 
 
 .header {
-  background-color: #2ecc71; 
+  background-color: #4DCC7D; 
   padding: 25rpx 30rpx;
   text-align: center;
   /* remove flex-shrink if header should not shrink */
